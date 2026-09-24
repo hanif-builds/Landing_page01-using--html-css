@@ -1,0 +1,213 @@
+/* ---------- Reset & base ---------- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #3d3d3d;
+  background: #ffffff;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+img { max-width: 100%; display: block; }
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+  z-index: 2;
+}
+
+a { text-decoration: none; }
+
+/* ---------- Decorative blobs ---------- */
+.blob {
+  position: absolute;
+  z-index: 1;
+  background: #eef0f2;
+  pointer-events: none;
+}
+
+.blob-hero {
+  top: -10%;
+  right: -10%;
+  width: 70%;
+  height: 140%;
+  border-radius: 48% 52% 62% 38% / 41% 45% 55% 59%;
+  background: linear-gradient(135deg, #f3f4f6 0%, #eceef1 100%);
+}
+
+.blob-channels {
+  top: 8%;
+  left: -12%;
+  width: 55%;
+  height: 90%;
+  border-radius: 42% 58% 60% 40% / 48% 40% 60% 52%;
+  background: linear-gradient(135deg, #f4f5f7 0%, #eaecef 100%);
+}
+
+.blob-messages {
+  bottom: -15%;
+  right: -14%;
+  width: 62%;
+  height: 100%;
+  border-radius: 55% 45% 38% 62% / 50% 55% 45% 50%;
+  background: linear-gradient(135deg, #f3f4f6 0%, #e9ebee 100%);
+}
+
+.blob-future {
+  bottom: -8%;
+  right: -18%;
+  width: 60%;
+  height: 95%;
+  border-radius: 45% 55% 60% 40% / 55% 45% 55% 45%;
+  background: linear-gradient(135deg, #f4f5f7 0%, #eaecef 100%);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  padding: 90px 0 60px;
+  overflow: hidden;
+}
+
+.hero__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.hero__copy { flex: 1 1 380px; max-width: 460px; }
+
+.hero__logo { width: 240px; margin-bottom: 18px; }
+
+.hero__tagline {
+  font-weight: 600;
+  font-size: 17px;
+  letter-spacing: 2.5px;
+  color: #262626;
+  margin-bottom: 10px;
+}
+
+.hero__subtext {
+  font-size: 16px;
+  color: #8a8a8a;
+  margin-bottom: 30px;
+}
+
+.store-badges {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.store-badges img { height: 46px; width: auto; }
+
+.hero__art { flex: 1 1 420px; max-width: 560px; }
+
+/* ---------- Feature sections (Channels / Messages / In future) ---------- */
+.feature {
+  position: relative;
+  padding: 70px 0;
+  overflow: hidden;
+}
+
+.feature__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.feature--reverse .feature__inner { flex-direction: row-reverse; }
+
+.feature__art { flex: 1 1 380px; max-width: 480px; }
+
+.feature__copy { flex: 1 1 340px; max-width: 420px; }
+
+.feature__copy h2 {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #262626;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+}
+
+.feature__copy p {
+  font-size: 16px;
+  color: #8a8a8a;
+}
+
+.feature--future { padding-top: 40px; }
+
+.vector-row {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto 20px;
+  opacity: 0.6;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  position: relative;
+  text-align: center;
+  padding: 70px 0 50px;
+  background: #fbfbfc;
+}
+
+.footer__lead {
+  font-size: 17px;
+  color: #3d3d3d;
+  margin-bottom: 22px;
+}
+
+.store-badges--center { justify-content: center; }
+
+.footer__contact {
+  margin-top: 28px;
+  font-size: 15px;
+  color: #3d3d3d;
+}
+
+.footer__contact a {
+  color: #2f8fe0;
+  font-weight: 500;
+}
+
+.footer__brand {
+  margin-top: 46px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__brand img { width: 46px; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .feature__inner,
+  .feature--reverse .feature__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero__inner { flex-direction: column; text-align: center; }
+  .hero__copy { max-width: 100%; }
+  .store-badges { justify-content: center; }
+  .feature__copy { max-width: 100%; }
+}
+
+@media (max-width: 520px) {
+  .container { padding: 0 24px; }
+  .hero { padding: 60px 0 40px; }
+  .hero__logo { width: 190px; }
+  .hero__tagline { font-size: 14px; letter-spacing: 1.5px; }
+  .feature__copy h2 { font-size: 22px; letter-spacing: 2px; }
+  .store-badges img { height: 40px; }
+}
