@@ -1,0 +1,4 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; width: 100%; background: #fff; }
+.design-page { width: 100%; margin: 0 auto; }
+.design-image { display: block; width: 100%; height: auto; }
